@@ -22,12 +22,19 @@ jobs:
         run: |
           ./gradlew clean test
 
-      - name: Publish Test Results
+      - name: Publish XML Test Results
         uses: actions/upload-artifact@v2
         with:
-          name: test-results
+          name: test-results-xml
           if-no-files-found: error
-          path: build/reports/tests/JUnit/xml/TEST-MainTest.xml
+          path: build/reports/tests/JUnit/xml
+
+      - name: Publish HTML Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results-html
+          if-no-files-found: error
+          path: build/reports/tests/JUnit/html
 
       - name: Build with Gradle
         run: |

@@ -16,4 +16,10 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+    reports {
+        html.required = true
+        junitXml.required = true
+        html.outputLocation = file("$buildDir/reports/tests/JUnit/html")
+        junitXml.outputLocation = file("$buildDir/reports/tests/JUnit/xml")
+    }
 }

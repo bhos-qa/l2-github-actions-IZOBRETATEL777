@@ -18,4 +18,10 @@ public class MainTest {
     public void testDivisionByZero() {
         assertEquals(0, Main.division(6, 0), "6 / 0 must be 0");
     }
+
+    @Test
+    @DisplayName("Test of 5 / 2")
+    public void testDivision2() {
+        assertEquals(3, Main.division(5, 2), "5 / 2 must be 3");
+    }
 }

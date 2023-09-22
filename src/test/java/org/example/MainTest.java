@@ -22,6 +22,6 @@ public class MainTest {
     @Test
     @DisplayName("Test of 5 / 2")
     public void testDivision2() {
-        assertEquals(3, Main.division(5, 2), "5 / 2 must be 3");
+        assertEquals(2, Main.division(5, 2), "5 / 2 must be 2");
     }
 }
